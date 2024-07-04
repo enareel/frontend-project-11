@@ -14,11 +14,11 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x, 19.x]
-      steps:
-        - uses: enareel/action-setup@v3.0.4
-        - name: Linting
-          id: lint
-          run: make lint
+    steps:
+      - uses: enareel/action-setup@v3.0.4
+      - name: Linting
+        id: lint
+        run: make lint
   # Testing using Jest
   jest:
     runs-on: ubuntu-latest
